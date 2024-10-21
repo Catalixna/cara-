@@ -11,8 +11,6 @@ import platform
 st.write("Versión de Python:", platform.python_version())
 
 image = Image.open('OIG5.jpg')
-
-
 col1, col2, col3 = st.columns([1, 2, 1])  
 with col1:
     st.write("")  # Columna vacía
@@ -29,7 +27,7 @@ st.markdown("<h1 style='text-align: center; color: #2a3a65;'>Reconocimiento de I
 
 with st.sidebar:
     st.write("_**¿Cuál es el propósito de esta página?** Podrás tomarte una foto en la que deberás hacer una de las dos opciones **(rock o onda)**. El propósito es que te diga cuál de las dos estás haciendo._")
-st.write("_Debes de tomar una foto donde de te vean las manos, podras hacer estas dos señas._")
+st.write("_Debes de tomar una foto donde se te vea **una mano**, podras hacer estas dos señas._")
 
 col1, col2 = st.columns(2)
 with col1:
