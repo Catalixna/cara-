@@ -10,6 +10,17 @@ import platform
 # Muestra la versión de Python junto con detalles adicionales
 st.write("Versión de Python:", platform.python_version())
 
+image = Image.open('OIG5.jpg')
+
+
+col1, col2, col3 = st.columns([1, 2, 1])  
+with col1:
+    st.write("")  # Columna vacía
+with col2:
+    st.image(image, width=350)  
+with col3:
+    st.write("") 
+    
 model = load_model('keras_model.h5')
 data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 #st.write("Versión de Python:", platform.python_version())
