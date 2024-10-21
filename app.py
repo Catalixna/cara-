@@ -18,9 +18,11 @@ st.markdown("<h1 style='text-align: center; color: #2a3a65;'>Reconocimiento de I
 image = Image.open('OIG5.jpg')
 st.image(image, width=350)
 with st.sidebar:
-    st.subheader("Usando un modelo entrenado en teachable Machine puedes Usarlo en esta app para identificar")
-st.write("Debes de tomar una foto donde de te vean las manos")
-img_file_buffer = st.camera_input("Toma una Foto:")
+    st.subheader("_**¿Cuál es el propósito de esta página?** Podrás tomarte una foto en la que deberás hacer una de las dos opciones **(rock o onda)**. El propósito es que te diga cuál de las dos estás haciendo._ ")
+st.write("Debes de tomar una foto donde de te vean las manos, podras hacer estas dos señas.")
+st.image('imagenes/neutral.png', width=300)
+st.image('imagenes/neutral.png', width=300)
+img_file_buffer = st.camera_input("_Toma una Foto:_")
 
 if img_file_buffer is not None:
     # To read image file buffer with OpenCV:
@@ -42,9 +44,9 @@ if img_file_buffer is not None:
     prediction = model.predict(data)
     print(prediction)
     if prediction[0][0]>0.5:
-      st.header('onda, es '+str( prediction[0][0]) )
+      st.header('_onda, es _'+str( prediction[0][0]) )
     if prediction[0][1]>0.5:
-      st.header('rock, es '+str( prediction[0][1]))
+      st.header('_rock, es _'+str( prediction[0][1]))
     #if prediction[0][2]>0.5:
     # st.header('Derecha, con Probabilidad: '+str( prediction[0][2])) 
 
