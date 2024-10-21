@@ -16,7 +16,7 @@ data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 st.markdown("<h1 style='text-align: center; color: #2a3a65;'>Reconocimiento de Imágenes</h1>", unsafe_allow_html=True)
 #st.write("Versión de Python:", platform.python_version())
 image = Image.open('OIG5.jpg')
-st.image(image, width=350)
+st.image(image, width=350: center)
 with st.sidebar:
     st.subheader("Usando un modelo entrenado en teachable Machine puedes Usarlo en esta app para identificar")
 st.write("Debes de tomar una foto donde de te vean las manos")
