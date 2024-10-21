@@ -14,12 +14,10 @@ model = load_model('keras_model.h5')
 data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 #st.write("Versión de Python:", platform.python_version())
 
-st.markdown("<h1 style='text-align: center;'><image='OIG5.jpg' width='350'></h1>", unsafe_allow_html=True)
-
 st.markdown("<h1 style='text-align: center; color: #2a3a65;'>Reconocimiento de Imágenes</h1>", unsafe_allow_html=True)
 
 with st.sidebar:
-    st.write("**¿Cuál es el propósito de esta página?** Podrás tomarte una foto en la que deberás hacer una de las dos opciones (rock o onda). El propósito es que te diga cuál de las dos estás haciendo. ")
+    st.write("_**¿Cuál es el propósito de esta página?** Podrás tomarte una foto en la que deberás hacer una de las dos opciones **(rock o onda)**. El propósito es que te diga cuál de las dos estás haciendo._")
 st.write("_Debes de tomar una foto donde de te vean las manos, podras hacer estas dos señas._")
 
 col1, col2 = st.columns(2)
