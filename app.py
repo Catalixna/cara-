@@ -16,16 +16,16 @@ data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 st.markdown("<h1 style='text-align: center; color: #2a3a65;'>Reconocimiento de Imágenes</h1>", unsafe_allow_html=True)
 #st.write("Versión de Python:", platform.python_version())
 image = Image.open('OIG5.jpg')
-st.image(image, width=350)
+st.image(image, width=100)
 with st.sidebar:
     st.subheader("_**¿Cuál es el propósito de esta página?** Podrás tomarte una foto en la que deberás hacer una de las dos opciones **(rock o onda)**. El propósito es que te diga cuál de las dos estás haciendo._ ")
 st.write("Debes de tomar una foto donde de te vean las manos, podras hacer estas dos señas.")
 
 col1, col2 = st.columns(2)
 with col1:
-    st.image('rock.png', caption="Seña Rock", width=300)
+    st.image('rock.png', caption="Seña Rock", width=250)
 with col2:
-    st.image('onda.png', caption="Seña Onda", width=300)
+    st.image('onda.png', caption="Seña Onda", width=250)
     
 img_file_buffer = st.camera_input("_Toma una Foto:_")
 if img_file_buffer is not None:
