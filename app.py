@@ -12,6 +12,9 @@ st.write("Versión de Python:", platform.python_version())
 
 model = load_model('keras_model.h5')
 data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
+#st.write("Versión de Python:", platform.python_version())
+image = Image.open('OIG5.jpg')
+st.image(image, width=300)
 
 st.markdown("<h1 style='text-align: center; color: #2a3a65;'>Reconocimiento de Imágenes</h1>", unsafe_allow_html=True)
 
